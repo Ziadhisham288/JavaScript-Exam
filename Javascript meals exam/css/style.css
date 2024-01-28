@@ -1,0 +1,267 @@
+/* General styling */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+i {
+    cursor: pointer;
+}
+
+/* home section style */
+
+#home .inner .layer {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* padding: 10px; */
+    transition: all 0.5s;
+} 
+
+#home .inner .layer p {
+    font-size: 2rem;
+    opacity: 1;
+}
+
+#home .inner:hover .layer {
+    top: 0%;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+}
+
+/* side bar style */ 
+
+#sideBar {
+    width: 300px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+    background-color: rgb(15, 14, 14);
+    left: -228px;
+}
+
+#sideBar .menuLinks {
+    text-decoration: none;
+    color:white;
+}
+
+#sideBar li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+
+#sideBar .barOptions img {
+   width: 40px;
+}
+
+#closeBarBtn {
+    display: none;
+}
+
+
+#sideBar img {
+    cursor: pointer;
+}
+
+#sideBar a {
+    cursor: pointer;
+}
+
+
+#detailsPage {
+    display: none;
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+
+#detailsPage li {
+    color: white;
+    margin: 0 5px;
+}
+
+#sourceBtn {
+    background-color: #157347;
+    color:white;
+    border-radius: 8px;
+}
+
+
+#mealCategories {
+    display: none;
+}
+
+#mealCategories .inner .layer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: white;
+    /* padding: 10px; */
+    transition:  0.5s;
+    padding: 0 10px;
+} 
+
+#mealCategories .inner .layer p {
+    opacity: 1;
+}
+
+#mealCategories .inner:hover .layer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    cursor: pointer;
+}
+
+#mealByCategory .inner .layer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: white;
+    /* padding: 10px; */
+    transition:  0.5s;
+    padding: 0 10px;
+} 
+
+#mealByCategory .inner .layer p {
+    font-size: 2rem;
+    opacity: 1;
+}
+
+#mealByCategory .inner:hover .layer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    cursor: pointer;
+}
+
+#detailsCloseBtn {
+    position: absolute;
+    right: 0;
+    margin-right: 80px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    background-color: red;
+    color:white;
+    border: none;
+}
+
+#mealIngredients img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(229deg) brightness(106%) contrast(101%);
+}
+
+
+.inner {
+    border-radius: 8px;
+}
+
+
+.inner .layer {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* padding: 10px; */
+    transition: all 0.5s;
+}
+
+.inner .layer p {
+    font-size: 2rem;
+    opacity: 1;
+}
+
+.inner:hover .layer {
+    top: 0%;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+}
+
+.areaCard:hover, .ingredientCard:hover {
+    cursor: pointer;
+}
+
+#search {
+    display: none;
+}
+
+#search input {
+    width: 49%;
+}
+
+#contactUs {
+    display: none;
+}
+
+.alert{
+    width: fit-content;
+}
+
+#loadingScreen {
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 60px;
+    aspect-ratio: 1;
+    display: grid;
+    grid: 50%/50%;
+    color: #ffa516; 
+    border-radius: 50%;
+    --_g: no-repeat linear-gradient(currentColor 0 0);
+    background: var(--_g),var(--_g),var(--_g);
+    background-size: 50.1% 50.1%;
+    animation: 
+      l9-0   1.5s infinite steps(1) alternate,
+      l9-0-0 3s   infinite steps(1) alternate;
+  }
+  .loader::before {
+    content: "";
+    background: currentColor;
+    border-top-left-radius: 100px;
+    transform: perspective(150px) rotateY(0deg) rotateX(0deg);
+    transform-origin: bottom right; 
+    animation: l9-1 1.5s infinite linear alternate;
+  }
+  @keyframes l9-0 {
+    0%  {background-position: 0    100%,100% 100%,100% 0}
+    33% {background-position: 100% 100%,100% 100%,100% 0}
+    66% {background-position: 100% 0   ,100% 0   ,100% 0}
+  }
+  @keyframes l9-0-0 {
+    0%  {transform: scaleX(1)  rotate(0deg)}
+    50% {transform: scaleX(-1) rotate(-90deg)}
+  }
+  @keyframes l9-1 {
+    16.5%{transform:perspective(150px) rotateX(-90deg)  rotateY(0deg)    rotateX(0deg);filter:grayscale(0.8)}
+    33%  {transform:perspective(150px) rotateX(-180deg) rotateY(0deg)    rotateX(0deg)}
+    66%  {transform:perspective(150px) rotateX(-180deg) rotateY(-180deg) rotateX(0deg)}
+    100% {transform:perspective(150px) rotateX(-180deg) rotateY(-180deg) rotateX(-180deg);filter:grayscale(0.8)}
+  }
